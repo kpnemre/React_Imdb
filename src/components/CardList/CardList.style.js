@@ -5,7 +5,6 @@ export const StyledCardList = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  padding:2rem;
-  background:#283137;
-  
-`
+  padding: 2rem;
+  background: #283137;
+`;
