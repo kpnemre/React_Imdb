@@ -20,6 +20,7 @@ export const StyledCardWrapper = styled.div`
 
 export const StyledText = styled.p`
   color: white;
+  padding:0.3rem;
 `;
 
 
@@ -27,9 +28,11 @@ export const StyledImageText = styled.div`
   width: 80%;
   display:flex;
   justify-content:center;
+  
 `;
 export const StyledImage = styled.img`
   width: 100%;
   height: auto;
   border-radius:5%;
+
 `;

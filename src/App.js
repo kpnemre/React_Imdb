@@ -30,6 +30,7 @@ function App() {
 
 console.log(movieData);
 
+
   return (
     <div className="App">
       <SearchBox setSearchKeyword={setSearchKeyword}/>

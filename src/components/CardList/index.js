@@ -13,6 +13,7 @@ export const CardList = ({movieData}) => {
         movieData?.map((movie, index) => {
           return (
             <Card
+            movie={movie}
               key={index}
               title={movie.title}
               image={baseImageUrl + movie.poster_path}
