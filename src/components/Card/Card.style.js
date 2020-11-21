@@ -25,14 +25,35 @@ export const StyledText = styled.p`
 
 
 export const StyledImageText = styled.div`
-  width: 80%;
+  width: 100%;
   display:flex;
   justify-content:center;
+  /* resize:both; */
   
 `;
 export const StyledImage = styled.img`
   width: 100%;
   height: auto;
   border-radius:5%;
+`;
+
+export const StyledNoPoster = styled.p`
+  width: auto;
+  height: 21rem;
+  border-radius:5%;
+  background-color:white;
+  font-size:2rem;
+  font-family: Impact, Charcoal, sans-serif;
+  justify-content:center;
+  display: flex;
+  align-items: center;
+
+
+`;
+export const StyledInfo = styled.div`
+  width: 100%;
+  height: auto;
+  border-radius:5%;
+  display:flex;
 
 `;
