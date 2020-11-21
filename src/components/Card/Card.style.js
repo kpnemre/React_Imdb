@@ -16,12 +16,15 @@ export const StyledText = styled.p`
   color: white;
 `;
 
-export const StyledHeading = styled.h1`
-  color: blue;
-  font-size: 2rem;
-`;
 
+export const StyledImageText = styled.div`
+  width: 80%;
+  height: auto;
+  border-radius:5%;
+  display:flex;
+`;
 export const StyledImage = styled.img`
   width: 80%;
   height: auto;
+  border-radius:5%;
 `;

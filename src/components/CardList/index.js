@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Card } from "../Card";
 import { StyledCardList } from "./CardList.style";
 
@@ -10,12 +10,14 @@ export const CardList = ({movieData}) => {
   return (
     <StyledCardList>
       {movieData &&
-        movieData.map((movie) => {
+        movieData?.map((movie, index) => {
           return (
             <Card
+              key={index}
               title={movie.title}
               image={baseImageUrl + movie.poster_path}
               release={movie.release_date}
+              vote={movie.vote_average}
             />
           );
         })}

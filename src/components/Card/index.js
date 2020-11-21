@@ -1,14 +1,21 @@
-import {StyledCardWrapper, StyledText, StyledImage} from "./Card.style"
+import {
+  StyledCardWrapper,
+  StyledText,
+  StyledImage,
+  StyledImageText,
+} from "./Card.style";
 
-export const Card = ({title,image,release}) => {
+export const Card = ({ title, image, release, vote }) => {
+  return (
+    <StyledCardWrapper>
+      <StyledText>{title}</StyledText>
 
-    return (
-        <StyledCardWrapper>
-                 <StyledText>{title}</StyledText>
-            <StyledImage src={image} alt="Poster"></StyledImage>
-            <StyledText>{release}</StyledText>
+      <StyledImageText>
+        <StyledText>{vote}</StyledText>
+        <StyledImage src={image} alt="Poster"></StyledImage>
+      </StyledImageText>
 
-
-        </StyledCardWrapper>
-    )
-}
+      <StyledText>{release}</StyledText>
+    </StyledCardWrapper>
+  );
+};
