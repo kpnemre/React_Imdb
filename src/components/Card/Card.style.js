@@ -10,6 +10,12 @@ export const StyledCardWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+        transform: scale(1.2);
+        box-shadow: 0.3rem 0.3rem 0.9rem rgba(0,0,0,0.1);
+        transition: 0.9s;
+    }
 `;
 
 export const StyledText = styled.p`
@@ -19,12 +25,11 @@ export const StyledText = styled.p`
 
 export const StyledImageText = styled.div`
   width: 80%;
-  height: auto;
-  border-radius:5%;
   display:flex;
+  justify-content:center;
 `;
 export const StyledImage = styled.img`
-  width: 80%;
+  width: 100%;
   height: auto;
   border-radius:5%;
 `;
