@@ -28,7 +28,7 @@ function App() {
       .catch((err) => console.log(err));
   }, [searchKeyword]);
 
-console.log(movieData);
+// console.log(movieData);
 
 
   return (

@@ -10,7 +10,7 @@ import {
 //const null_image = "index.js:9 https://image.tmdb.org/t/p/w500null"
 
 export const Card = ({ title, image, release, vote, movie }) => {
-  console.log(movie.poster_path);
+  // console.log(movie.poster_path);
   //  ya resim ya da null
   return (
     <StyledCardWrapper>
