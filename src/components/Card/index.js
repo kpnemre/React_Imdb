@@ -13,7 +13,7 @@ export const Card = ({ title, image, release, vote, movie }) => {
   // console.log(movie.poster_path);
   //  ya resim ya da null
   return (
-    <StyledCardWrapper>
+    <StyledCardWrapper >
       <StyledImageText>
         {movie.poster_path ? (
           <StyledImage src={image}></StyledImage>
