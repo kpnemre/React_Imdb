@@ -29,11 +29,12 @@ export default function MovieDetails() {
 console.log(movieDetail.poster_path);
 
     return (
-        <div>
+        <div >
             
              <img src={baseImageUrl + movieDetail.poster_path}/>           
+            
 
-            {/* <p> {id}</p> */}
+           
         </div>
     )
 }

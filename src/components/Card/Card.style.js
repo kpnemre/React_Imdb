@@ -47,8 +47,7 @@ export const StyledNoPoster = styled.p`
   justify-content:center;
   display: flex;
   align-items: center;
-
-
+  color:black;
 `;
 export const StyledInfo = styled.div`
   width: 100%;
