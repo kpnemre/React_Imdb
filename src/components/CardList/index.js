@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Card } from "../Card";
 import { StyledCardList } from "./CardList.style";
-import { MovieContext } from "../../Movie";
+import { MovieContext } from "../../pages/Movie";
 import {Link} from 'react-router-dom';
 
 const baseImageUrl = "https://image.tmdb.org/t/p/w500";

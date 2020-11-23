@@ -1,8 +1,8 @@
-import './App.css';
+
 import React,{ useState, useEffect, createContext} from 'react';
 import axios from "axios";
-import {CardList} from "./components/CardList";
-import {SearchBox} from "./components/SearchBox";
+import {CardList} from "../components/CardList";
+import {SearchBox} from "../components/SearchBox";
 
 
 const apiKey = "3ca91bf17a8b671b2e8464cdec300f9f";

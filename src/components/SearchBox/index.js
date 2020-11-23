@@ -4,7 +4,7 @@ import {
   StyledSearchInput,
   StyledButtonInput,
 } from "./SearchBox.style";
-import {MovieContext} from '../../Movie';
+import {MovieContext} from '../../pages/Movie';
 
 export const SearchBox = () => {
   const { setSearchKeyword } = useContext(MovieContext);

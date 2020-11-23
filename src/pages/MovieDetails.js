@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from "axios";
-import {StyledImage} from "./components/Card/Card.style";
+// import {StyledImage} from "./components/Card/Card.style";
 
 
 
@@ -15,7 +15,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 export default function MovieDetails() {
     const {id}= useParams();
     
-    const [movieDetail, setMovieDetail]= useState();
+    const [movieDetail, setMovieDetail]= useState([]);
     useEffect(() => {
         axios
           .get(baseUrl + id, {
@@ -23,18 +23,16 @@ export default function MovieDetails() {
               api_key: apiKey
             },
           })
-          .then((res) => setMovieDetail(res?.data.poster_path))
+          .then((res) => setMovieDetail(res.data))
           .catch((err) => console.log(err));
-      }, []);
-console.log(movieDetail);
+      }, [id]);
+console.log(movieDetail.poster_path);
+
     return (
         <div>
             
-             <StyledImage src={baseImageUrl + movieDetail}>           
-            </StyledImage>
-           
+             <img src={baseImageUrl + movieDetail.poster_path}/>           
 
-           
             {/* <p> {id}</p> */}
         </div>
     )
