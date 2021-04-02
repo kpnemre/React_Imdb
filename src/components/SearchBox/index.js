@@ -2,7 +2,8 @@ import React, { useState, useRef,useContext } from "react";
 import {
   StyledSearchBox,
   StyledSearchInput,
-  StyledButtonInput,
+  // StyledButtonInput,
+  // StyledSearchButton
 } from "./SearchBox.style";
 import {MovieContext} from '../../pages/Movie';
 
@@ -10,7 +11,7 @@ export const SearchBox = () => {
   const { setSearchKeyword } = useContext(MovieContext);
   //const [inputValue,setInputValue]=useState('');
 const inputRef= useRef();
-// console.log(inputRef?.current?.value);   
+console.log(inputRef?.current?.value);   
 
   // const search = (e) => {
   //   //setInputValue(e.target.value)
@@ -19,7 +20,7 @@ const inputRef= useRef();
 
   return (
     <StyledSearchBox>
-      <StyledSearchInput ref={inputRef} onChange={()=>setSearchKeyword(inputRef?.current?.value)}></StyledSearchInput>
+      <StyledSearchInput isColored ref={inputRef} onChange={()=>setSearchKeyword(inputRef?.current?.value)}></StyledSearchInput>
       {/* <StyledSearchInput onChange={search}></StyledSearchInput> */}
       {/* <StyledButtonInput onClick={()=>setSearchKeyword(inputValue)}>Search</StyledButtonInput> */}
     </StyledSearchBox>

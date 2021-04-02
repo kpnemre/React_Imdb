@@ -10,7 +10,7 @@ export default function Navbar() {
 
               <Link to="/"> HOME </Link> 
               <Link to="/"> Catogories </Link> 
-              <Link to="/"> Most Watching </Link> 
+              <Link to="/most"> Most Watching </Link> 
               <Link to="/"> Series </Link> 
               <Link to="/"> Directors </Link> 
             

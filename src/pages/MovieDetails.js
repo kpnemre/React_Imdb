@@ -13,9 +13,14 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
 
 export default function MovieDetails() {
+
+
+  // todo: movie id
     const {id}= useParams();
+    // console.log('id', id)
     
     const [movieDetail, setMovieDetail]= useState([]);
+
     useEffect(() => {
         axios
           .get(baseUrl + id, {
@@ -26,14 +31,15 @@ export default function MovieDetails() {
           .then((res) => setMovieDetail(res.data))
           .catch((err) => console.log(err));
       }, [id]);
-console.log(movieDetail.poster_path);
+console.log('movie detail:',movieDetail);
 
     return (
         <div >
             
-             <img src={baseImageUrl + movieDetail.poster_path}/>           
-            
-
+             <p>Movie Title: {movieDetail.original_title}</p>         
+             <img src={baseImageUrl + movieDetail.poster_path}/>  
+             <p>Release date: {movieDetail.release_date}</p>
+            {/* <p>hello {id}</p> */}
            
         </div>
     )

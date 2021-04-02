@@ -20,6 +20,7 @@ export const CardList = () => {
                 movie={movie}
                 key={index}
                 title={movie.title}
+                id={movie.id}
                 image={baseImageUrl + movie.poster_path}
                 release={movie.release_date}
                 vote={movie.vote_average}

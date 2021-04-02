@@ -14,7 +14,7 @@ export const MovieContext  = createContext();
 function Movie() {
 
   const [movieData, setMovieData] = useState([]);
-  const [searchKeyword, setSearchKeyword] = useState("Matrix");
+  const [searchKeyword, setSearchKeyword] = useState("Toy Story");
 
 
   useEffect(() => {

@@ -6,17 +6,22 @@ import {
   StyledNoPoster,
   StyledInfo,
 } from "./Card.style";
+// import {useHistory} from "react-router-dom";
 
 //const null_image = "index.js:9 https://image.tmdb.org/t/p/w500null"
 
-export const Card = ({ title, image, release, vote, movie }) => {
+export const Card = ({ title, image, release, vote, movie ,id}) => {
   // console.log(movie.poster_path);
   //  ya resim ya da null
+
+  // const history= useHistory();
   return (
+    // <StyledCardWrapper onClick={()=> history.push(``/detail/${id}`)}>
     <StyledCardWrapper >
       <StyledImageText>
         {movie.poster_path ? (
-          <StyledImage src={image}></StyledImage>
+          <StyledImage src={image} alt={title}></StyledImage>
+
         ) : (
           <StyledNoPoster>No Image Available</StyledNoPoster>
         )}
