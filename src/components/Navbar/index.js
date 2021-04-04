@@ -1,22 +1,40 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import {NavList} from './Navbar.style';
-
+import React from "react";
+// import { StyledLink } from "react-router-dom";
+import { NavList, Logo, NavLi, Menu, StyledLink } from "./Navbar.style";
 
 export default function Navbar() {
-    return (
-        <NavList>
-    
 
-              <Link to="/"> HOME </Link> 
-              <Link to="/"> Catogories </Link> 
-              <Link to="/most"> Most Watching </Link> 
-              <Link to="/"> Series </Link> 
-              <Link to="/"> Directors </Link> 
-            
-              {/* <Link to="/details/602"> HOME </Link> 
-              <Link to="/details/601"> HOME </Link> 
-              <Link to="/details/600"> HOME </Link>  */}
-        </NavList>
-    )
+    
+  return (
+    <NavList>
+      <Logo href="#">
+        Tmdb <span>Movie</span>
+      </Logo>
+      <Menu>
+        <NavLi>
+          <StyledLink to="/" > HOME </StyledLink>
+        </NavLi>
+
+        <NavLi>
+          <StyledLink to="/catagories"> CATAGORIES </StyledLink>
+        </NavLi>
+
+        <NavLi>
+          <StyledLink to="/most"> MOST WATCHING </StyledLink>
+        </NavLi>
+
+        <NavLi>
+          <StyledLink to="/series"> SERIES </StyledLink>
+        </NavLi>
+
+        <NavLi>
+          <StyledLink to="/directors"> DIRECTORS </StyledLink>
+        </NavLi>
+      </Menu>
+     
+      {/* <StyledLink to="/details/602"> HOME </StyledLink> 
+              <StyledLink to="/details/601"> HOME </StyledLink> 
+              <StyledLink to="/details/600"> HOME </StyledLink>  */}
+    </NavList>
+  );
 }

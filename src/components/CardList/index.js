@@ -15,10 +15,10 @@ export const CardList = () => {
         movieData?.map((movie, index) => {
           return (
             // <Link  to="/details/{movie.id}">
-            <Link  to={`/details/${movie.id}`}>
+            <Link  to={`/details/${movie.id}`} key={index}>
               <Card
                 movie={movie}
-                key={index}
+                
                 title={movie.title}
                 id={movie.id}
                 image={baseImageUrl + movie.poster_path}

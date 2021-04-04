@@ -36,7 +36,7 @@ function Movie() {
   return (
     <div className="App">
       <MovieContext.Provider value={{setSearchKeyword,movieData}}>
-      <SearchBox/>
+      {/* <SearchBox/> */}
       {/* <SearchBox setSearchKeyword={setSearchKeyword}/> */}
       {/* <CardList movieData = {movieData}/> */}
       <CardList/>
