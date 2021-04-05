@@ -7,6 +7,7 @@ import Catagories from "./pages/Catagories";
 import Directors from "./pages/Directors";
 import { Switch, Route, BrowserRouter} from "react-router-dom";
 import Navbar from "./components/Navbar/index";
+import Footer from "./components/Footer/index";
 
 
 export default function App() {
@@ -24,7 +25,7 @@ export default function App() {
           <Route path="/" component = {Movie} />
           {/* ana sayfa hep altta olur. üsttekilerden uymayan olursa ana sayfaya gitsin. exact kullanımı var bir de */}
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );

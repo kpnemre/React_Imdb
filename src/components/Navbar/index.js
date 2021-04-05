@@ -7,7 +7,7 @@ export default function Navbar() {
     
   return (
     <NavList>
-      <Logo href="#">
+      <Logo href="/">
         Tmdb <span>Movie</span>
       </Logo>
       <Menu>

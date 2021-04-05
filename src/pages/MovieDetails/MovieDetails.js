@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ReactPlayer from "react-player/lazy";
-import {MovieContainer} from "./MovieDetails.style"
+import {MovieContainer, Container, Title, MovieImage} from "./MovieDetails.style"
 // import {StyledImage} from "./components/Card/Card.style";
 
 const apiKey = "3ca91bf17a8b671b2e8464cdec300f9f";
@@ -49,18 +49,34 @@ export default function MovieDetails() {
   console.log("movie vİDEO:", movieVideo);
 
   return (
-    <MovieContainer>
+    <Container>
+      <Title>
+        <p> {movieDetail.original_title}</p>
+        <p>Imdb rate: {movieDetail.vote_average}</p>
+      </Title>
+     
+      <MovieContainer>
+        <div>
+          <MovieImage src={baseImageUrl + movieDetail.poster_path} />
+        </div>
+
+        <div>
+        <ReactPlayer url={url + movieVideo} />
+
+        </div>
+      </MovieContainer>
       <div>
-        <p>Movie Title: {movieDetail.original_title}</p>
-        <p>Release date: {movieDetail.release_date}</p>
-      </div>
-      
-      <div>
-        <img src={baseImageUrl + movieDetail.poster_path} />
+      <p>
+            <span>Release date:</span> {movieDetail.release_date}
+          </p>
+          <p>
+            <span>Overview:</span> {movieDetail.overview}
+          </p>
+          <p>
+            <span>Homepage:</span> {movieDetail.homepage}
+          </p>
       </div>
 
-
-      <ReactPlayer url={url + movieVideo} />
-    </MovieContainer>
+    </Container>
   );
 }
